@@ -1,0 +1,36 @@
+h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+p::first-letter {
+    text-transform: uppercase;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+#primary-list {
+    list-style: none;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 150px;
+}
+
+ol {
+    padding: 0px;
+}
