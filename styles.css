@@ -34,3 +34,29 @@ img {
 ol {
     padding: 0px;
 }
+
+.banner {
+    height: 300px;
+    width: 300px;
+    background-image: url("./background.png");
+    background-repeat: no-repeat;
+}
+
+.hide {
+    display: none;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+body {
+    padding: 20px;
+    margin: 20px;
+}
+
+a:hover {
+    opacity: 0.5;
+}
