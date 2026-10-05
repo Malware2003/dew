@@ -53,10 +53,52 @@ ol {
 }
 
 body {
+    margin: 0;
+}
+
+main {
     padding: 20px;
-    margin: 20px;
 }
 
 a:hover {
     opacity: 0.5;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 10px;
+    background-color: darkkhaki;
+    width: 100%;
+}
+
+.header .nav {
+    text-align: center;
+}
+
+.header .nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.products-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.products {
+    text-align: center;
+    border: 1px solid #ccc;
+    flex-basis: 30%;
+}
+
+.products img {
+    max-width: 100%;
+    max-height: 150px;
 }
