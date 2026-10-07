@@ -1,14 +1,15 @@
+a:hover {
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+body {
+    margin: 0;
+}
+
 h1 {
     font-size: 30px;
     text-transform: uppercase;
-}
-
-p::first-letter {
-    text-transform: uppercase;
-}
-
-a:hover {
-    text-decoration: none;
 }
 
 h1,
@@ -20,19 +21,22 @@ h6 {
     text-align: center;
 }
 
-#primary-list {
-    list-style: none;
-    text-align: center;
-}
-
 img {
     display: block;
     margin: auto;
     max-width: 150px;
 }
 
+main {
+    padding: 20px;
+}
+
 ol {
     padding: 0px;
+}
+
+p::first-letter {
+    text-transform: uppercase;
 }
 
 .banner {
@@ -42,26 +46,15 @@ ol {
     background-repeat: no-repeat;
 }
 
-.hide {
-    display: none;
+
+#primary-list {
+    list-style: none;
+    text-align: center;
 }
 
-.nav {
-    position: sticky;
-    top: 0;
-    z-index: 3;
-}
-
-body {
-    margin: 0;
-}
-
-main {
+.footer {
     padding: 20px;
-}
-
-a:hover {
-    opacity: 0.5;
+    background-color: #607d8b;
 }
 
 .header {
@@ -82,7 +75,17 @@ a:hover {
     margin-right: 10px;
 }
 
-.products-list {
+.hide {
+    display: none;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+/* .products-list {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -92,13 +95,68 @@ a:hover {
     gap: 10px;
 }
 
-.products {
+.product {
     text-align: center;
     border: 1px solid #ccc;
     flex-basis: 30%;
 }
 
-.products img {
+.product img {
     max-width: 100%;
     max-height: 150px;
+} */
+
+.products-list {
+    padding: 20px;
+    gap: 10px 20px;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: stretch;
+    align-content: center;
+    overflow: hidden;
+    grid-template-areas: "product3 . product1" ". product2 .";
+}
+
+.products-list,
+.products-list li {
+    display: grid;
+}
+
+.product {
+    border:  1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-1 {
+    grid-area: product1;
+}
+
+.product-2 {
+    grid-area: product2;
+}
+
+.product-3 {
+    grid-area: product3;
+}
+
+@media print {
+    .header,
+    .footer {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .products-list{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-list{
+        grid-template-columns: 1fr;
+    }
 }
