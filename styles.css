@@ -65,6 +65,10 @@ p::first-letter {
     text-align: center;
 }
 
+#products-title {
+    animation: rotate 3s linear infinite;
+}
+
 .footer {
     padding: 20px;
     background-color: #607d8b;
@@ -92,7 +96,7 @@ p::first-letter {
     display: none;
 }
 
-.intro h1 {
+.intro {
     width: 50%;
     animation: move 3s linear infinite;
     margin: auto;
